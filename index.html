@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Моё портфолио</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="port">
+    <h1>Здравствуйте! Я начинающий Backend-разработчик</h1>
+    <p>Это моё портфолио. Здесь собраны все мои соцсети и проекты.</p>
+ <p>Это мой первый серьёзный проект.Сделанный на CSS и HTML</p>
+    
+    <div class="social-links">
+      <a href="#" class="social-link">Telegram</a>
+      <a href="#" class="social-link">Github</a>
+      <a href="#" class="social-link">TikTok</a>
+    </div>
+
+    <!-- Проекты -->
+    <div class="projects">
+      <div class="project-card">
+        <h5>Сайт портфолио.</h5>
+        <p>Сайт с портфолио блоками проектов,соцсетей.Написанный на HTML и CSS.</p>
+        <a href="#" class="project-link">Перейти</a>
+      </div>
+      <div class="project-card">
+        <h5>Калькулятор Пайтон</h5>
+        <p>Обычный калькулятор пайтон</p>
+        <a href="#" class="project-link">Перейти</a>
+      </div>
+      <div class="project-card">
+        <h5>Проект 3</h5>
+        <p>Описание проекта 3</p>
+        <a href="#" class="project-link">Перейти</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Блок формы внизу -->
+  <div class="contact-block">
+    <h2>Связаться со мной</h2>
+    <form class="contact-form" action="https://formspree.io/f/your-id" method="POST">
+      <input type="text" name="name" placeholder="Ваше имя" required>
+      <input type="email" name="email" placeholder="Ваш email" required>
+      <textarea name="message" placeholder="Напишите сообщение" required></textarea>
+      <button type="submit">Отправить</button>
+    </form>
+  </div>
+
+</body>
+</html>
