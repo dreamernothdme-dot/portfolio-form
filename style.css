@@ -1,150 +1,105 @@
-/* Сброс стандартных отступов */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Стиль для body */  
+/* Фон страницы */
 body {
+  background: linear-gradient(#1c1b1b, #0c0c0c, #1ccbcb, #186c6c);
+  height: 100vh;
+  margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #1c1c1c, #23ab0898);
-  color: #d3c9c9;
-  min-height: 100vh;
-  padding: 20px;
-  display: block; /* Убираем вертикальное центрирование */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Контейнер портфолио */
-.port {
-  max-width: 900px;
+/* Блок для формы */
+.form-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+}
+
+/* Форма регистрации / входа */
+.register {
+  width: 400px;
+  padding: 25px;
+  background: linear-gradient(135deg, #1c1b1b, #0c0c0c, #1ccbcb, #186c6c);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  color: white;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Анимация появления формы */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Заголовок формы */
+.register h2 {
   text-align: center;
-  background: linear-gradient(135deg, #2a2a2a, #23ab0898);
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-  color: #d3c9c9;
-  margin: 0 auto; /* центр по горизонтали */
-}
-
-/* Заголовки внутри портфолио */
-.port h1 {
-  font-size: 32px;
-  margin-bottom: 15px;
-  background: linear-gradient(90deg, #ff6ec4, #23ab0898);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.port h5 {
-  font-size: 20px;
-  margin: 30px 0 10px 0;
-}
-
-/* Обычные абзацы */
-.port p {
-  font-size: 16px;
   margin-bottom: 20px;
 }
 
-/* Блок соцсетей */
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-/* Кнопки-ссылки */
-.social-link {
-  text-decoration: none;
-  color: #fff;
-  background-color: #23ab0898;
-  padding: 10px 20px;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-}
-
-.social-link:hover {
-  background-color: #23ab0898;
-  transform: scale(1.05);
-}
-
-/* Карточки проектов */
-.project-card {
-  background-color: #2a2a2a;
-  padding: 20px;
-  border-radius: 15px;
-  margin: 30px auto;
-  max-width: 400px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px) scale(1.03);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.6);
-}
-
-/* Ссылки внутри карточек */
-.project-link {
-  display: inline-block;
-  text-decoration: none;
-  color: #fff;
-  background-color: #6c3aff;
-  padding: 8px 15px;
-  border-radius: 12px;
+/* Метки полей */
+.register label {
+  display: block;
   margin-top: 10px;
-  transition: all 0.3s ease;
+  font-weight: bold;
 }
 
-.project-link:hover {
-  background-color: #3b0fd3;
-  transform: scale(1.1);
-}
-
-/* Новый блок контактной формы */
-.contact-block {
-  background: linear-gradient(135deg, #23ab0898, #2a2a2a);
-  padding: 50px 20px;
-  text-align: center;
-  border-radius: 20px;
-  margin: 40px auto 0 auto;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-  color: #fff;
-  max-width: 700px;
-}
-
-/* Форма */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #0909094a;
-  font-size: 14px;
+/* Поля ввода */
+.register input[type="text"],
+.register input[type="password"] {
   width: 100%;
-}
-
-.contact-form button {
   padding: 10px;
+  margin-top: 5px;
   border: none;
-  border-radius: 8px;
-  background-color: #410ddc;
-  color: white;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
-.contact-form button:hover {
-  transform: scale(1.05);
-  background-color: #3b0fd3;
+/* Hover для текстовых полей */
+.register input[type="text"]:hover,
+.register input[type="password"]:hover {
+  background-color: rgba(230, 230, 230, 0.9);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Кнопка отправки формы */
+.register input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #111;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/* Hover для кнопки */
+.register input[type="submit"]:hover {
+  background-color: #2e312e;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Ссылки под формой */
+.form-block p {
+  margin-top: 10px;
+  color: white;
+}
+
+.form-block a {
+  color: #00ffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.form-block a:hover {
+  color: #ffffff;
 }
